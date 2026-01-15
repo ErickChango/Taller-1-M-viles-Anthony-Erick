@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { Text, TouchableOpacity, View } from 'react-native';
 
 export default function WelcomeScreen({ route, navigation }: any) {
   const { username } = route.params;

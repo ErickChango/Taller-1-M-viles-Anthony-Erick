@@ -1,12 +1,12 @@
 import React from 'react';
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function PerfilScreen({ route, navigation }: any) {
   const { username } = route.params;
 
   return (
     <View style={styles.container}>
-      {/* Cabecera de Perfil */}
+    
       <View style={styles.header}>
         <View style={styles.avatarContainer}>
           <Text style={styles.avatarEmoji}>👨‍🚀</Text>
@@ -15,7 +15,6 @@ export default function PerfilScreen({ route, navigation }: any) {
         <Text style={styles.rankText}>Rango: Cazador Novato</Text>
       </View>
 
-      {/* Estadísticas del Jugador */}
       <View style={styles.statsContainer}>
         <View style={styles.statBox}>
           <Text style={styles.statNumber}>1</Text>
@@ -27,7 +26,6 @@ export default function PerfilScreen({ route, navigation }: any) {
         </View>
       </View>
 
-      {/* Botón de Cerrar Sesión */}
       <TouchableOpacity 
         style={styles.logoutButton} 
         onPress={() => navigation.replace('Login')}

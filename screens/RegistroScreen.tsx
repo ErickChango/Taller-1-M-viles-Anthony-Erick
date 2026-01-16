@@ -5,11 +5,11 @@ import { supabase } from '../superbase/SuperbaseConfig';
 export default function RegistroScreen({ navigation }: any) {
   const [user, setUser] = useState('');
 
-  const registrarGuerrero = async () => {
+  const registrarJugador = async () => {
     if(!user) return Alert.alert("Error", "El alias es obligatorio");
     const { error } = await supabase.from('usuarios').insert([{ username: user }]);
     if (!error) {
-      Alert.alert("EXITO", "Guerrero registrado en la base de datos");
+      Alert.alert("EXITO", "Jugador registrado en la base de datos");
       navigation.navigate('Login');
     }
   };
@@ -18,7 +18,7 @@ export default function RegistroScreen({ navigation }: any) {
     <View style={styles.container}>
       <Text style={styles.title}>NUEVO REGISTRO</Text>
       <TextInput style={styles.input} placeholder="Alias" placeholderTextColor="#555" onChangeText={setUser} />
-      <TouchableOpacity style={styles.btn} onPress={registrarGuerrero}>
+      <TouchableOpacity style={styles.btn} onPress={registrarJugador}>
         <Text style={styles.btnText}>GUARDAR DATOS</Text>
       </TouchableOpacity>
     </View>

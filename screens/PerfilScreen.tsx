@@ -1,5 +1,4 @@
-import React from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, StatusBar } from 'react-native';
+import { StatusBar, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function PerfilScreen({ route, navigation }: any) {
   const { username } = route.params;

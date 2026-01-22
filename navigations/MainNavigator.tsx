@@ -1,18 +1,15 @@
-import React from 'react';
-import { createStackNavigator } from '@react-navigation/stack';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-
-import RegistroScreen from '../screens/RegistroScreen';
-import WelcomeScreen from '../screens/WelcomeScreen';
+import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
 import JuegoScreen from '../screens/JuegoScreen';
 import PerfilScreen from '../screens/PerfilScreen';
 import PuntuacionScreen from '../screens/PuntuacionScreen';
-import LoginScreen from '../screens/LoginScreen';
+import RegistroScreen from '../screens/RegistroScreen';
+import WelcomeScreen from '../screens/WelcomeScreen';
+import LoginScreen from '../screens/loginScreen';
 
 const Stack = createStackNavigator();
 const Drawer = createDrawerNavigator();
-
-
 function MyDrawer({ route }: any) {
   const { username } = route.params || { username: 'Usuario' };
 

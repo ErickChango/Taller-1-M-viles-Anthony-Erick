@@ -31,7 +31,6 @@ export default function JuegoScreen({ route }: any) {
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
       
-      {/* Fondo decorativo sutil */}
       <View style={[styles.glow, { top: -50, left: -50 }]} />
 
       <View style={styles.header}>
@@ -64,14 +63,14 @@ export default function JuegoScreen({ route }: any) {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: '#0f172a', // Fondo azul oscuro petróleo
+    backgroundColor: '#0f172a', 
   },
   glow: {
     position: 'absolute',
     width: 300,
     height: 300,
     borderRadius: 150,
-    backgroundColor: 'rgba(34, 197, 94, 0.05)', // Brillo verde muy suave
+    backgroundColor: 'rgba(34, 197, 94, 0.05)', 
   },
   header: { 
     marginTop: 60, 

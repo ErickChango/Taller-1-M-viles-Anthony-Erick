@@ -8,7 +8,7 @@ export default function PerfilScreen({ route, navigation }: any) {
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
       
-      {/* Fondo decorativo */}
+      
       <View style={[styles.glow, { top: -40, right: -40, backgroundColor: '#e74c3c20' }]} />
 
       <View style={styles.header}>
@@ -57,7 +57,7 @@ export default function PerfilScreen({ route, navigation }: any) {
 const styles = StyleSheet.create({
   container: { 
     flex: 1, 
-    backgroundColor: '#0f172a', // Azul oscuro (igual que JuegoScreen)
+    backgroundColor: '#0f172a', 
     alignItems: 'center', 
     paddingTop: 80 
   },

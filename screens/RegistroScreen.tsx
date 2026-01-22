@@ -15,7 +15,7 @@ export default function RegistroScreen({ navigation }: any) {
 
     setLoading(true);
 
-    // 1. Registro en Supabase Auth
+   
     const { data, error: authError } = await supabase.auth.signUp({
       email: email.trim(),
       password: password,
@@ -30,7 +30,7 @@ export default function RegistroScreen({ navigation }: any) {
       return;
     }
 
-    // 2. Inserción en la tabla 'usuarios' (la que sale en tu captura)
+
     if (data.user) {
       const { error: dbError } = await supabase
         .from('usuarios')

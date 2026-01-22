@@ -13,7 +13,7 @@ export default function WelcomeScreen({ route, navigation }: WelcomeProps) {
     <View style={styles.container}>
       <StatusBar barStyle="light-content" />
       
-      {/* Elementos decorativos de fondo */}
+      
       <View style={[styles.circle, { top: -50, left: -50, backgroundColor: '#27ae60' }]} />
       <View style={[styles.circle, { bottom: -80, right: -50, backgroundColor: '#1e8449' }]} />
 

@@ -1,9 +1,9 @@
-import React from 'react';
+import { Ionicons } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import React from 'react';
 import JuegoScreen from '../screens/JuegoScreen';
 import PerfilScreen from '../screens/PerfilScreen';
 import PuntuacionScreen from '../screens/PuntuacionScreen';
-import { Ionicons } from '@expo/vector-icons';
 
 const Tab = createBottomTabNavigator();
 

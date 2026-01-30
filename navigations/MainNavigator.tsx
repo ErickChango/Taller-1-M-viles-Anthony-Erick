@@ -1,0 +1,57 @@
+import LoginScreen from '@/screens/LoginScreen';
+import RegistroScreen from '@/screens/RegistroScreen';
+import WelcomeScreen from '@/screens/WelcomeScreen';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createStackNavigator } from '@react-navigation/stack';
+import React from 'react';
+import JuegoScreen from '../screens/JuegoScreen';
+import PerfilScreen from '../screens/PerfilScreen';
+import PuntuacionScreen from '../screens/PuntuacionScreen';
+
+
+const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
+function MyDrawer({ route }: any) {
+  const { username } = route.params || { username: 'Usuario' };
+
+  return (
+    <Drawer.Navigator 
+      screenOptions={{ 
+        headerStyle: { backgroundColor: '#64965d' }, 
+        headerTintColor: '#fff',
+        drawerActiveTintColor: 'rgb(28, 176, 68)'
+      }}
+    >
+      <Drawer.Screen 
+        name="Juego" 
+        component={JuegoScreen} 
+        initialParams={{ username }} 
+        options={{ title: '🦟 Cazar Mosquitos' }} 
+      />
+      <Drawer.Screen 
+        name="Ranking" 
+        component={PuntuacionScreen} 
+        options={{ title: '🏆 Top Global' }} 
+      />
+      <Drawer.Screen 
+        name="Perfil" 
+        component={PerfilScreen} 
+        initialParams={{ username }} 
+        options={{ title: '👤 Mi Perfil' }} 
+      />
+    </Drawer.Navigator>
+  );
+}
+
+
+export default function MainNavigator() {
+  return (
+    <Stack.Navigator screenOptions={{ headerShown: false }}>
+      <Stack.Screen name="Login" component={LoginScreen} />
+      <Stack.Screen name="Registro" component={RegistroScreen} />
+      <Stack.Screen name="Welcome" component={WelcomeScreen} />
+      
+      <Stack.Screen name="Main" component={MyDrawer} />
+    </Stack.Navigator>
+  );
+}

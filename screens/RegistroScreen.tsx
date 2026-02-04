@@ -1,14 +1,18 @@
+import { Ionicons } from '@expo/vector-icons';
+import { decode } from 'base64-arraybuffer';
+import * as FileSystem from 'expo-file-system/legacy';
+import * as ImagePicker from 'expo-image-picker';
 import React, { useState } from 'react';
-import { 
-  ActivityIndicator, Alert, KeyboardAvoidingView, Platform, 
-  ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, 
-  View, Image, StatusBar 
+import {
+  ActivityIndicator, Alert,
+  Image,
+  KeyboardAvoidingView, Platform,
+  ScrollView,
+  StatusBar,
+  StyleSheet, Text, TextInput, TouchableOpacity,
+  View
 } from 'react-native';
 import { supabase } from '../superbase/SuperbaseConfig';
-import * as ImagePicker from 'expo-image-picker';
-import { Ionicons } from '@expo/vector-icons';
-import * as FileSystem from 'expo-file-system/legacy';
-import { decode } from 'base64-arraybuffer';
 
 export default function RegistroScreen({ navigation }: any) {
   const [username, setUsername] = useState('');
